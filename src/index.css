@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    
+    --color-deep-green: #064D2A;
+    --color-dark-green: #022B18;
+    --color-forest-green: #0B6B3A;
+    --color-emerald-light: #EBF7EE;
+    --color-gold-yellow: #FFD21F;
+    --color-yellow-hover: #F0C20E;
+    --color-text-main: #111111;
+    --color-text-muted: #4B5563;
+    --color-bg-light: #F7F9F7;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text-main);
+    background-color: var(--color-bg-light);
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-mono-formula {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Physics Visual Effects and Keyframes */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes reverse-spin-slow {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes wave-flow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+
+.animate-reverse-spin-slow {
+  animation: reverse-spin-slow 30s linear infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Physics Grid & Sleek Patterns */
+.physics-pattern {
+  background-image: radial-gradient(#064D2A 0.75px, transparent 0.75px);
+  background-size: 20px 20px;
+  opacity: 0.12;
+}
+
+.physics-pattern-dark {
+  background-image: radial-gradient(#FFD21F 0.6px, transparent 0.6px);
+  background-size: 20px 20px;
+  opacity: 0.08;
+}
+
+.glow {
+  box-shadow: 0 0 30px rgba(11, 107, 58, 0.35);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(255, 210, 31, 0.45);
+}
+
+.bg-physics-grid {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(6, 77, 42, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-physics-grid-dark {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(255, 210, 31, 0.12) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F4F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #0B6B3A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #064D2A;
+}

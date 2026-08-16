@@ -1,0 +1,7 @@
+{
+  "name": "Kurne Institute",
+  "description": "Kurne Institute is a premier Physics coaching institute in Latur founded by Mr. Mubeen Kurne Sir, providing concept-focused Physics coaching for 11th & 12th students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
